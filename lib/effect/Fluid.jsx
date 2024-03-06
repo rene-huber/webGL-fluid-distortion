@@ -1,7 +1,7 @@
 
 import { forwardRef, useEffect, useMemo } from 'react';
 
-import { FluidEffect } from './FluidEffect';
+import FluidEffect  from './FluidEffect';
 
 export const Effect = forwardRef(function Fluid(props, ref) {
     const effect = useMemo(() => new FluidEffect(props), [props]);

@@ -1,6 +1,5 @@
-"use client";
 import { Effect } from 'postprocessing';
-import { Texture, Uniform, Vector3 } from 'three';
+import { Uniform, Vector3 } from 'three';
 import { hexToRgb } from '../utils';
 
 import fragmentShader from '../glsl/post.frag';
@@ -14,7 +13,6 @@ class FluidEffect extends Effect {
             uIntensity: new Uniform(props.intensity),
             uBlend: new Uniform(props.blend),
             uShowBackground: new Uniform(props.showBackground),
-
             uColor: new Uniform(hexToRgb(props.fluidColor)),
             uBackgroundColor: new Uniform(hexToRgb(props.backgroundColor)),
         };
